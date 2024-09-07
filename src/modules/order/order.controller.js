@@ -68,7 +68,7 @@ export const createOrder = async (req, res, next) => {
     }
     //visa ==> stripe
     if (payment == "visa") {
-        const stripe = new Stripe("sk_test_51PtEDmP2Soe3ZKLKmoYdoyFxtEr26e49ilTO3qVDWtBLMi71unLmlms6DhB0f92ZWZcixNwhqX4Ot7GyEwdP2Caj00eUrKcHyA")
+        const stripe = new Stripe(process.env.SECRET_KEY_PAYMENT)
         const checkout = await stripe.checkout.sessions.create({
             success_url: "http://www.google.com",
             cancel_url: "http://www.facebook.com",
