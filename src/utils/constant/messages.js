@@ -36,6 +36,7 @@ export const messages = {
     },
     wishlist: generateMessage('wishlist'),
     token: "signup or login first",
+    unAuthorized: "you are not authorized",
     review: generateMessage('review'),
     coupon: {
         ...generateMessage("coupon"),
